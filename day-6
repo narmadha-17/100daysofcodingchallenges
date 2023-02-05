@@ -1,0 +1,26 @@
+//palindromic strings
+
+#include <stdio.h>
+int main(){
+   int p(char*);
+   char n[100];
+   scanf("%[^\n]s",n);
+   if(p(n))
+       printf("YES");
+   else
+       printf("NO");
+}
+int p(char*n){
+   int i,l,r;
+   for(i=0;i<n[i];i++);
+  
+   for(l=0,r=i-1;l<=r;l++,r--){
+       if(n[l]!=n[r]){
+           return 0;
+           l++;
+           r--;
+       }
+       else
+        return 1;
+   }
+}
