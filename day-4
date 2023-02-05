@@ -1,0 +1,51 @@
+//best index
+
+#include <stdio.h>
+ 
+int main(){
+	long n,i,k,j,left,p=0,max=-10000000;
+   scanf("%ld",&n);
+   long a[n],sum;
+   for(i=0;i<n;i++)
+   {
+       scanf("%ld",&a[i]);
+       if(i>0)
+       a[i]+=a[i-1];
+   }
+   for(i=0;i<n;i++)
+   {
+       left=n-i;
+       sum=0;
+       k=(-1+(int)sqrt((double)(8*left+1)))/2;
+       sum=a[(k*(k+1))/2+i-1];
+       if(i!=0)
+       sum-=a[i-1];
+       if(max<sum)
+       max=sum;
+   }
+   printf("%ld",max);
+}
+
+//seven segment display
+#include<stdio.h>
+#include<string.h>
+int main(void){
+   int t;
+   scanf("%d",&t);
+   while(t--)
+   {
+       int a[10]={6,2,5,5,4,5,6,3,7,6,},i,sum=0;
+       char n[100];
+       scanf("%s",n);
+       for(i=0;i<strlen(n);i++)
+       sum+= a[(n[i]-48)];
+       if(sum%2==1)
+           printf("7");
+       else
+           printf("1");
+           for(i=1;i<sum/2;i++)
+           printf("1");
+           printf("\n");
+   }
+}
+
