@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    int x=0,y=0,i;
+    char a[20];
+    scanf("%s",a);
+    for(i=0;a[i]!='\0';i++){
+        if(a[i]=='z'){
+            x++;
+        }
+        else{
+        y++;
+        }
+    }
+    if(2*x==y){
+        printf("Yes");
+    }
+    else{
+        printf("No");
+    }
+    return 0;
+}
