@@ -1,0 +1,21 @@
+//count divisors
+
+#include<stdio.h>
+void main()
+{
+	int l,r,k;
+	int ctr=0;
+	int arr[10000];
+	scanf("%d %d %d",&l,&r,&k);
+	for(int i =l; i<=r; i++)
+	{
+		arr[i]=i;
+		if(arr[i]%k==0)
+		{
+			ctr++;
+		}
+		
+	}
+printf("%d",ctr);
+	
+}
