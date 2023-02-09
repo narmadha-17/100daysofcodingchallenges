@@ -1,0 +1,47 @@
+//THREE ARRAYS
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<math.h>
+    long long int min(long long int x, long long int y){
+    	if(x<y)
+        return x;
+    	else
+    	return y;
+    }
+    int main(){
+    	int N,M,K;
+    	scanf("%d %d %d",&N,&M,&K);
+    	long long int a[N],b[N],c[N];
+    	long long int i,j,l;
+    	int p,T=0;
+    	for(i=0;i<N;i++)
+    	scanf("%lld %lld %lld",&a[i],&b[i],&c[i]);
+    	long long int lx,rx,ly,ry,lz,rz;
+    	scanf("%lld %lld",&lx,&rx);
+    	scanf("%lld %lld",&ly,&ry);
+    	scanf("%lld %lld",&lz,&rz);
+    	for(i=lx;i<min(rx,lx+M);i++){
+    		for(j=ly;j<min(ry,ly+M);j++){
+    			for(l=lz;l<min(rz,lz+M);l++){
+    				T=0;
+    				for(p=0;p<N;p++){
+    					if((a[p]*i+b[p]*j-c[p]*l)%M==0)
+    					T++;
+    				}
+    				if(T==K)
+    				break;
+    			}
+    			if(l<min(rz,lz+M))
+    			break;
+    		}
+    		if(j<min(ry,ly+M))
+    		break;
+    	}
+    	if(i<min(rx,lx+M)){
+    		printf("%lld %lld %lld",i,j,l);
+    	}
+    	else
+    	printf("-1\n");
+    }
