@@ -1,4 +1,5 @@
 //saving taxes
+//codechef
 
 /* package codechef; // don't place package name! */
 
@@ -21,4 +22,25 @@ class Codechef
 		    }
 		}
 	}
+}
+
+
+//two sums
+//leetcode
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int result[]=new int[2];
+        Map<Integer,Integer>Map=new HashMap<Integer,Integer>();
+        for(int i=0;i<nums.length;i++){
+            if(Map.containsKey(target-nums[i])){
+                result[1]=i;
+                result[0]=Map.get(target-nums[i]);
+                return result;
+            }
+            Map.put(nums[i],i);
+        
+        }
+    return result;
+    }
 }
