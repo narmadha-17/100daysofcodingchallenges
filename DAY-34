@@ -1,0 +1,27 @@
+//BIRTHDAY CAKE CANDLES
+//HACKERRANK
+JAVA
+import java.io.*;
+import java.util.*;
+import java.math.*;
+public class solution{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int candles[]=new int[n];
+        int sum=0;
+        for(int i=0;i<n;i++){
+            candles[i]=sc.nextInt();
+            if (candles[i]>sum){
+                sum=candles[i];
+            }
+        }
+        int total=0;
+        for(int j=0;j<n;j++){
+            if(sum==candles[j]){
+                    total++;
+            }
+        }
+        System.out.println(total);
+    }
+}
