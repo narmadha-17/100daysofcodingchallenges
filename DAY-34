@@ -25,3 +25,26 @@ public class solution{
         System.out.println(total);
     }
 }
+
+//playing with characters
+//hacker rank
+//c
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    char ch;
+    char s[24];
+    char sen[100];
+    scanf("%c",&ch);
+    scanf("%s",s);
+    scanf("\n%[^\n]s",sen);
+    printf("%c",ch);
+    printf("\n%s",s);
+    printf("\n%s",sen);
+    
+    return 0;
+}
