@@ -7,19 +7,18 @@ public class Result{
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         int size=5;
-        int max=0,min=0;
+        long max=0,min=0;
         long arr[]=new long[size];
-        int max=0,min=0;
         for(int i=0;i<size;i++){
             arr[i]=sc.nextLong();
         }
         Arrays.sort(arr);
         for(int i=0;i<size-1;i++){
-            min+=arr[i];
+            min=min+arr[i];
         }
         
         for(int i=1;i<size;i++){
-            max+=arr[i];
+            max=max+arr[i];
         }
         System.out.println(min+" "+max);
     }
