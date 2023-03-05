@@ -1,0 +1,25 @@
+//MINI-MAX-SUM
+//HACKERRANK
+//JAVA
+import java.util.*;
+import java.io.*;
+public class Result{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int size=5;
+        long arr[]=new long[size];
+        int max=0,min=0;
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextLong();
+        }
+        Arrays.sort(arr);
+        for(int i=0;i<size-1;i++){
+            min+=arr[i];
+        }
+        
+        for(int i=1;i<size;i++){
+            max+=arr[i];
+        }
+        System.out.println(min+" "+max);
+    }
+}
