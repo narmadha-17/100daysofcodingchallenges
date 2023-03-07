@@ -2,6 +2,8 @@
 //HACKER RANK
 //C
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
 #include <stdlib.h>
 int main(){
     char s[10];
@@ -13,12 +15,12 @@ int main(){
         }
     }
     else{
-        if(s[0]=='1'||s[1]=='2'){
-            s[0]=0;
-            s[1]=0;
+        if(s[0]=='1'&& s[1]=='2'){
+            s[0]='0';
+            s[1]='0';
         }
     }
     s[8]='\0';
-    printf("%s",s);
+    printf("%s\n",s);
     return 0;
 }
