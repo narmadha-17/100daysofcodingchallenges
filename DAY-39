@@ -1,0 +1,27 @@
+//PLUS MINUS
+//HACKER RANK
+//C++
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    float arr[n];
+    float p,q,r=0;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        if(arr[i]>0){
+            p++;
+        }
+        else if(arr[i]<0){
+            q++;
+        }
+        else{
+            r++;
+        }
+    }
+    cout<<p/n<<endl<<q/n<<endl<<r/n;
+    
+    
+    return 0;
+}
