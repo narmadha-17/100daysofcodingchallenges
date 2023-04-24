@@ -14,3 +14,21 @@ class Solution {
         
     }
 }
+
+//add digits
+//leetcode
+//java
+
+import java.lang.Math;
+class Solution {
+    public int addDigits(int num) {
+        while(num>9){
+            int first=num/10;
+            int last=num%10;
+            int sum=first+last;
+            num=sum;
+        }
+        return num;
+    }
+    
+}
